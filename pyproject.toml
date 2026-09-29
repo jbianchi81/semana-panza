@@ -1,0 +1,6 @@
+[project]
+name = "semana-panza"
+version = "0.1.0"
+description = "Calcula la semana de embarazo y la fecha estimada."
+requires-python = ">=3.9"
+dependencies = ["python-dotenv>=1.0"]
