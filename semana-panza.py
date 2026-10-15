@@ -19,10 +19,14 @@ now = datetime.now()
 
 elapsed = now - start
 
-elapsed_weeks = elapsed.days / 7
+elapsed_weeks = int(elapsed.days / 7)
+
+elapsed_days = int(elapsed.days - elapsed_weeks * 7)
 
 remaining = end - now
 
-remaining_weeks = remaining.days / 7
+remaining_weeks = int(remaining.days / 7)
 
-print("Vamo por la semana %.02f🤰. Faltan %.02f🤱 (%s). Caray😂!" % (elapsed_weeks, remaining_weeks, end.strftime("%a, %d %b %Y")))
+remaining_days = int(remaining.days - remaining_weeks * 7)
+
+print("Vamo por la semana %d día %d🤰. Faltan %d semanas y %d días🤱 (%s). Caray😂!" % (elapsed_weeks, elapsed_days, remaining_weeks, remaining_days, end.strftime("%a, %d %b %Y")))
